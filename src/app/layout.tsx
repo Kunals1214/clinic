@@ -1,0 +1,27 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+export const metadata: Metadata = {
+  title: "MediFlow - Comprehensive Clinic Management System",
+  description: "HIPAA-compliant healthcare clinic management platform with EHR, telemedicine, and billing",
+  keywords: ["healthcare", "clinic", "EHR", "medical records", "telemedicine", "HIPAA"],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.variable}>
+        {children}
+        <Toaster />
+      </body>
+    </html>
+  );
+}
