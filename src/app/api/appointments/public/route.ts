@@ -74,6 +74,9 @@ export async function POST(request: NextRequest) {
           city: patient.city || '',
           state: patient.state || '',
           zipCode: patient.zipCode || '',
+          emergencyContactName: patient.emergencyContactName || '',
+          emergencyContactPhone: patient.emergencyContactPhone || '',
+          emergencyContactRelation: patient.emergencyContactRelation || '',
           isActive: true
         }
       });
