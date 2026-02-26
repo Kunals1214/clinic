@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Activity, ArrowLeft, Award, Heart, Shield, Users } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { ArrowLeft, Award, Heart, Shield, Users } from 'lucide-react';
 
 export default function AboutPage() {
   const values = [
@@ -28,27 +30,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="border-b bg-white sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <Activity className="h-8 w-8 text-clinical-blue" />
-              <span className="text-2xl font-bold text-gray-900">MediFlow Hospital</span>
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-clinical-blue font-medium">Home</Link>
-              <Link href="/about" className="text-clinical-blue font-medium">About</Link>
-              <Link href="/services" className="text-gray-700 hover:text-clinical-blue font-medium">Services</Link>
-              <Link href="/doctors" className="text-gray-700 hover:text-clinical-blue font-medium">Our Doctors</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-clinical-blue font-medium">Contact</Link>
-            </div>
-            <Link href="/book-appointment">
-              <Button className="bg-clinical-blue hover:bg-clinical-blue/90">Book Appointment</Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
@@ -166,6 +148,7 @@ export default function AboutPage() {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }

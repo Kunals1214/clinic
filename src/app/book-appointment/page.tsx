@@ -8,8 +8,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { 
-  Activity, 
   Calendar,
   CheckCircle,
   ArrowRight,
@@ -125,39 +126,7 @@ export default function BookAppointmentPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="border-b bg-white sticky top-0 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <Activity className="h-8 w-8 text-clinical-blue" />
-              <span className="text-2xl font-bold text-gray-900">MediFlow Hospital</span>
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-clinical-blue font-medium">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-clinical-blue font-medium">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-700 hover:text-clinical-blue font-medium">
-                Services
-              </Link>
-              <Link href="/doctors" className="text-gray-700 hover:text-clinical-blue font-medium">
-                Our Doctors
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-clinical-blue font-medium">
-                Contact
-              </Link>
-            </div>
-            <Link href="/login">
-              <Button variant="outline">
-                Staff Login
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
@@ -558,19 +527,7 @@ export default function BookAppointmentPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <Activity className="h-6 w-6 text-clinical-blue" />
-              <span className="text-xl font-bold">MediFlow Hospital</span>
-            </div>
-            <p className="text-gray-400">
-              &copy; 2025 MediFlow Hospital. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
